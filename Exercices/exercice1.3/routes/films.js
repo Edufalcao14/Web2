@@ -74,4 +74,17 @@ catalogue_films.push(newFilm);
 res.json(newFilm);
 });
 
+router.get('/', (req, res, next) => {
+  const duration = req?.query?.['minimum-duration'] > 0 ? Number(req.query['minimum-duration']) : undefined;
+if (duration==undefined){
+console.log('GET /films'); 
+return res.json(catalogue_films); //return tableau non triée
+}
+
+const orderedCatalogue = [...catalogue_films].filter(filme => filme.duration >= duration);
+
+console.log('GET /films');
+res.json(orderedCatalogue);
+});
+
 module.exports = router;
