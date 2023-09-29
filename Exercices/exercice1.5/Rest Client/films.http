@@ -1,0 +1,28 @@
+### Read all films
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read  all films with filter
+GET {{baseUrl}}/films?minimum-duration=190
+
+### Read  all films with filter
+GET {{baseUrl}}/films?startsoo-with=D
+
+### Read  all films with title order
+GET {{baseUrl}}/films?order=title
+### Read  all films with duration order
+GET {{baseUrl}}/films?order=durationMax
+
+### Read the film identified by an id 
+GET {{baseUrl}}/films/2
+
+### Add new film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Inglorius Bastards",
+    "duration": 253 , 
+    "budget": 70000000,
+    "link": "https://en.wikipedia.org/wiki/Inglourious_Basterds"
+}
