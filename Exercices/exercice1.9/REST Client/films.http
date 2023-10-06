@@ -1,0 +1,35 @@
+### Read all films
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read  all films with title order
+GET {{baseUrl}}/films?order=-title
+
+
+### Read the film identified by an id 
+GET {{baseUrl}}/films/3
+
+### Add new film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Inglorius Bastards",
+    "duration": 253 , 
+    "budget": 70000000,
+    "link": "https://en.wikipedia.org/wiki/Inglourious_Basterds"
+}
+### Delete film identified by 2
+DELETE {{baseUrl}}/films/2
+
+### Update the film identified by Id
+PATCH {{baseUrl}}/films/3
+Content-Type: application/json
+
+{
+    "title":"Scarface2",
+    "duration": 253 , 
+    "budget": 900000,
+    "link": "https://en.wikipedia.org/wiki/Inglourious_Basterds"
+}
+
