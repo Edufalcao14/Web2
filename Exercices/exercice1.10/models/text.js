@@ -69,7 +69,7 @@ function createOneText(title, content, level) {
 }
 
 function deleteOneText(id) {
-  const idNumber = parseInt(id, 10);
+  const idNumber = id;
   const texts = parse(jsonDbPath, TEXTS_BASE);
   const foundIndex = texts.findIndex((text) => text.id === idNumber);
   if (foundIndex < 0) return undefined;

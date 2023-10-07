@@ -19,7 +19,7 @@ Content-Type: application/json
     "level":"hard"
 }
 ### Delete text identified by 2
-DELETE {{baseUrl}}/texts/2
+DELETE {{baseUrl}}/texts/925452d3-fc3d-4b3b-a39b-372b7207bac5
 
 ### Update the text identified by Id
 PUT {{baseUrl}}/texts/d0d80483-44a0-4j4e-9bc1-34495eed5b2c
