@@ -1,0 +1,33 @@
+### Read all films
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/texts
+
+### Read  all texts with title order
+GET {{baseUrl}}/texts?level=medium
+
+
+### Read the texts identified by an id 
+GET {{baseUrl}}/texts/ecd2f50c-e52d-49fd-8131-5c9487e0547e
+
+### Add new text 
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+    "title":"Inglorius Bastards",
+    "content":"La méthode v4 de uuid génère un UUID version4, qui est un UUID aléatoire basé sur des données  aléatoires. Cela garantit que chaque ID généré est e à une très haute probabilité.",
+    "level":"hard"
+}
+### Delete text identified by 2
+DELETE {{baseUrl}}/texts/2
+
+### Update the text identified by Id
+PUT {{baseUrl}}/texts/d0d80483-44a0-4j4e-9bc1-34495eed5b2c
+Content-Type: application/json
+
+{
+    "title":"test",
+    "content":"test",
+    "level":"easy"
+}
+
