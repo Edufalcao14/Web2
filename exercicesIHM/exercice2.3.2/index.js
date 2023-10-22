@@ -1,10 +1,10 @@
-const divs = document.querySelectorAll("#container");
+const divs = document.querySelectorAll("div");
 
 divs.forEach((divElement) => {
-    divElement.addEventListener('click',(div)=>{
-        let rgb = "rgb(224, 152, 0)";
-        divElement.style.backgroundColor  = rgb;
-        divElement.innerText = "RGB COLOR : " + rgb;
+    divElement.addEventListener('mouseover',(div)=>{
+    
+        divElement.style.backgroundColor  = 'rgb(255 , 153 , 255)';
+       
     });
     
 });
